@@ -1,0 +1,30 @@
+mysql> source test.sql;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) from Track' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) from Artist' at line 1
+mysql> source text.sql
+ERROR: 
+Failed to open file 'text.sql', error: 2
+mysql> source test.sql
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) from Track' at line 1
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) from Artist' at line 1
+mysql> notee
+mysql> select min(LastName) from Customer;
++---------------+
+| min(LastName) |
++---------------+
+| Almeida       |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select min(BirthDate) from Employee;
++---------------------+
+| min(BirthDate)      |
++---------------------+
+| 1947-09-19 00:00:00 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select test.sql
+    -> ;
+ERROR 1109 (42S02): Unknown table 'test' in field list
+mysql> exit
